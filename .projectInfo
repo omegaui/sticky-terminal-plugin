@@ -1,0 +1,10 @@
+>JDK Path
+-/usr/lib/jvm/jdk-17
+>Main Class
+-test.plugin.StickyTerminalTest
+>Language Tag
+-0
+>Opened Editors on Main Tab Panel
+-project-root$/src/omega/ui/window/StickyTerminalPreferences.java
+>Project Classpath : Required Jars
+-/home/ubuntu/Documents/Omega IDE/build/Omega IDE.jar
