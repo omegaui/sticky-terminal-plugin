@@ -52,7 +52,7 @@ public class StickyTerminalSettingsProvider extends DefaultSettingsProvider{
 		colors[12] = Color.decode("#253237");
 		colors[13] = Color.decode("#5C6B73");
 		colors[14] = Color.decode("#4C2719");
-		colors[15] = isDarkMode() ? Color.decode("#242424") : c2;
+		colors[15] = c2;
 	}
 	
 	@Override
