@@ -1,4 +1,4 @@
-/**
+/*
  * StickyTerminalSettingsProvider
  * Copyright (C) 2022 Omega UI
 
@@ -36,6 +36,7 @@ public class StickyTerminalSettingsProvider extends DefaultSettingsProvider{
 	private Font terminalFont = new Font(StickyTerminal.preferences.fontName, StickyTerminal.preferences.fontState, StickyTerminal.preferences.fontSize);
 	
 	private static Color[] colors = new Color[16];
+	public static ColorPalette colorPalatte;
 	static{
 		colors[0] = glow;
 		colors[1] = TOOLMENU_COLOR2;
@@ -53,6 +54,17 @@ public class StickyTerminalSettingsProvider extends DefaultSettingsProvider{
 		colors[13] = Color.decode("#5C6B73");
 		colors[14] = Color.decode("#4C2719");
 		colors[15] = c2;
+		
+		colorPalatte = new ColorPalette(){
+			@Override
+			public Color getBackgroundByColorIndex(int index){
+				return colors[index];
+			}
+			@Override
+			public Color getForegroundByColorIndex(int index){
+				return colors[index];
+			}
+		};
 	}
 	
 	@Override
@@ -81,12 +93,7 @@ public class StickyTerminalSettingsProvider extends DefaultSettingsProvider{
 	}
 	@Override
 	public ColorPalette getTerminalColorPalette() {
-		return new ColorPalette(){
-			@Override
-			public Color[] getIndexColors(){
-				return colors;
-			}
-		};
+		return colorPalatte;
 	}
 	@Override
 	public float getTerminalFontSize() {
